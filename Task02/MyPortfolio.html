@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MyPortfolio</title>
+    <link rel="stylesheet" href="style(task02).css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1 class="logo">Dinesh J</h1>
+            <nav>
+                <ul>
+                    <li><a href="#hero">Home</a></li>
+                    <li><a href="#skills">Skills</a></li>
+                    <li><a href="#projects">Projects</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    
+    <section id="hero">
+        <div class="background-image"></div>
+        <div class="container content">
+            <img src="file:///C:/Users/Dinesh.J/OneDrive/Pictures/Screenshots/Screenshot%202024-06-06%20074703.png" alt="Profile Image">
+            <div class="text">
+                <h2>About Me</h2>
+                <p>Motivated and dedicated Bachelor of Computer Application (BCA) student at Christ (Deemed to be University) College with a strong foundation in programming, web development, and database management. Eager to leverage my skills in a dynamic and growth-oriented environment.</p>
+                <a href="#skills" class="btn">Learn More</a>
+            </div>
+        </div>
+    </section>
+    
+    <section id="skills">
+        <img src="https://cdni.iconscout.com/illustration/premium/thumb/man-developer-4587971-3804382.png?f=webp" alt="Skills Image" style="width: 40%; height: 100%;">
+        <div class="container content">
+            <div class="text">
+                <h2>My Skills</h2>
+                <ul>
+                    <li><img src="https://upload.wikimedia.org/wikipedia/commons/1/18/ISO_C%2B%2B_Logo.svg" alt="CPP"></li>
+                    <li><img src="https://upload.wikimedia.org/wikipedia/en/3/30/Java_programming_language_logo.svg" alt="Java"></li>
+                    <li><img src="https://upload.wikimedia.org/wikipedia/commons/6/61/HTML5_logo_and_wordmark.svg" alt="HTML"></li>
+                    <li><img src="https://upload.wikimedia.org/wikipedia/commons/d/d5/CSS3_logo_and_wordmark.svg" alt="CSS"></li>
+                    <li><img src="https://upload.wikimedia.org/wikipedia/commons/6/6a/JavaScript-logo.png" alt="JavaScript"></li>
+                    <li><img src="https://upload.wikimedia.org/wikipedia/commons/2/29/Postgresql_elephant.svg" alt="SQL"></li>
+                    <li><img src="https://w7.pngwing.com/pngs/580/809/png-transparent-data-structure-logo-brand-data-structure-blue-text-logo.png" alt="DSA"></li>
+                </ul>
+                <p>I possess beginner-level skills in various programming languages and technologies, including C++, Java, HTML, CSS, and JavaScript. Additionally, I have a basic understanding of SQL and data structures. Despite being at the beginner level, I am eager to learn and improve my proficiency in these areas. My goal is to continue honing my skills and gaining practical experience to become a proficient software developer.</p>
+            </div>
+        </div>
+    </section>
+    
+    <section id="projects">
+        <div class="container">
+            <h2>My Projects</h2>
+            <div class="project-cards">
+                <div class="project-card" data-project="project1">
+                    <img src="file:///C:/Users/Dinesh.J/OneDrive/Pictures/Screenshots/Screenshot%202024-05-29%20195123.png" alt="Project 1">
+                    <h3>Project One (JavaApplication)</h3>
+                    <p>The Volunteer Management System is a console-based Java application designed to manage information about volunteers in an organization. The system allows the user to input details for both regular and special volunteers and then displays their information along with a thank-you message.</p>
+                </div>
+                <div class="project-card" data-project="project2">
+                    <img src="file:///C:/Users/Dinesh.J/OneDrive/Pictures/Screenshots/Screenshot%202024-01-08%20192710.png" alt="Project 2">
+                    <h3>Project Two (WebPage using HTML, CSS, JS)</h3>
+                    <p>This project is a single-page website for "InvestWise," aimed at introducing new users to stock market investments. HTML structures the content, CSS styles the layout and design, and JavaScript adds interactivity, such as handling the sign-up modal form. The result is an informative and user-friendly platform for beginner investors.</p>
+                </div>
+                <div class="project-card" data-project="project3">
+                    <img src="file:///C:/Users/Dinesh.J/OneDrive/Pictures/Screenshots/Screenshot%202024-05-30%20084927.png" alt="Project 3">
+                    <h3>Project Three (DataBase Connectivity)</h3>
+                    <p>This Java Swing project features a login form and a main interface for managing work-related records in a MySQL database. Users can view, enroll, update, and delete records through a tabbed GUI. The application connects to the database using JDBC, performing SQL operations for data manipulation and ensuring error handling for robust database interactions.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+<section id="resume">
+    <div class="container">
+        <h2>Resume</h2>
+        <a href="file:///C:/Users/Dinesh.J/Downloads/RESUME.pdf" class="btn" download>Download Resume</a>
+    </div>
+</section>
+
+    <div id="myModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <div id="modal-body">
+            </div>
+        </div>
+    </div>
+
+    <section id="contact">
+        <div class="container">
+            <h2>Contact Me</h2>
+            <form class="contact-form">
+                <input type="text" name="name" placeholder="Your Name" required>
+                <input type="email" name="email" placeholder="Your Email" required>
+                <input type="text" name="subject" placeholder="Subject" required>
+                <textarea name="message" rows="5" placeholder="Your Message" required></textarea>
+                <button type="submit">Send Message</button>
+            </form>
+            <div class="contact-info">
+                <p>Email: <a href="mailto:dineshjdj01@gmail.com">dineshjdj01@gmail.com</a></p>
+                <p>Phone: <a href="tel:+91-8792570457">+91-8792570457</a></p>
+            </div>
+            <div class="social-links">
+                <a href="https://linkedin.com/in/yourprofile" target="_blank">LinkedIn</a>
+                <a href="https://github.com/yourprofile" target="_blank">GitHub</a>
+                <a href="https://twitter.com/yourprofile" target="_blank">Twitter</a>
+            </div>
+        </div>
+    </section>
+    
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 MyWebsite. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+
+        var modal = document.getElementById("myModal");
+
+        var span = document.getElementsByClassName("close")[0];
+
+        span.onclick = function() {
+            modal.style.display = "none";
+        }
+
+        window.onclick = function(event) {
+            if (event.target == modal) {
+                modal.style.display = "none";
+            }
+        }
+
+        var projectCards = document.querySelectorAll(".project-card");
+
+        projectCards.forEach(function(card) {
+            card.addEventListener("click", function() {
+                var project = card.getAttribute("data-project");
+                var modalBody = document.getElementById("modal-body");
+
+                if (project === "project1") {
+                    modalBody.innerHTML = `
+                        <h2>Project One (JavaApplication)</h2>
+                        <img src="file:///C:/Users/Dinesh.J/OneDrive/Pictures/Screenshots/Screenshot%202024-05-29%20195123.png" alt="Project 1" width="790" height="400">
+                        <img src="file:///C:/Users/Dinesh.J/OneDrive/Pictures/Screenshots/Screenshot%202024-05-29%20200531.png" alt="Project 1" width="790" height="400">
+                        <h3>Detailed Description</h3>
+                        <p>The main goal of this project is to manage volunteer information effectively. It provides functionalities to input, store, and display details about different types of volunteers - regular volunteers who track their working hours and special volunteers who have particular skills.</p>
+                        <p>1.Purpose: Detailed description of Project Two. This project demonstrates my ability to work with databases and backend technologies. I developed a full-stack application with a robust backend and efficient database interactions.</p>
+                        <p>2.Features: The Volunteer Management System is a console-based Java application designed to manage volunteer information. It supports both regular volunteers, who track their working hours, and special volunteers, who have particular skills. The system ensures proper input validation, uses an abstract class for shared attributes and methods, and demonstrates polymorphism with subclasses for each volunteer type. It also features a final method for a universal thank-you message and encapsulates volunteer details with private fields and public methods. This project highlights the principles of object-oriented programming, including inheritance, polymorphism, and encapsulation.</p>
+                        <p>The Volunteer Management System project is a simple yet effective way to grasp fundamental programming concepts while creating a functional application to manage volunteer information.</p>
+                    `;
+                } else if (project === "project2") {
+                    modalBody.innerHTML = `
+                        <h2>Project Two (WebPage using HTML, CSS, JS)</h2>
+                        <img src="file:///C:/Users/Dinesh.J/OneDrive/Pictures/Screenshots/Screenshot%202024-01-08%20192710.png" alt="Project 1" width="790" height="400">
+                        <img src="file:///C:/Users/Dinesh.J/OneDrive/Pictures/Screenshots/Screenshot%202024-01-08%20192742.png" alt="Project 1" width="790" height="400">
+                        <h3>Detailed Description</h3>
+                        <p>This project is a single-page website designed for "InvestWise," which aims to introduce new users to stock market investments.</p>
+                        <p>The HTML provides a well-structured layout, organizing the site into sections like "Home," "About," "Volatility-Based Stocks," "How It Works," and "Contact." CSS is utilized to enhance the visual appeal with styles for navigation, tables, images, and buttons, ensuring a cohesive and engaging user experience.</p>
+                        <p>JavaScript adds interactivity, particularly in managing the sign-up modal, handling form submissions, and improving overall user engagement. The site serves as an informative and user-friendly platform, offering educational resources, categorized stock information, and support for novice investors.</p>                    
+                        `;
+                } else if (project === "project3") {
+                    modalBody.innerHTML = `
+                        <h2>Project Three (DataBase Connectivity)</h2>
+                        <img src="file:///C:/Users/Dinesh.J/OneDrive/Pictures/Screenshots/Screenshot%202024-05-30%20084927.png" alt="Project 1" width="790" height="400">
+                        <img src="file:///C:/Users/Dinesh.J/OneDrive/Pictures/Screenshots/Screenshot%202024-05-30%20084946.png" alt="Project 1" width="790" height="400">
+                        <h3>Detailed Description</h3>
+                        <p>This Java Swing project offers a user-friendly interface for managing work-related records with robust database connectivity. The application begins with a login form for user authentication. Upon successful login, users can access three main tabs: Volunteer List, Enroll into Work, and Update/Delete Operations.</p>
+                        <p>The Volunteer List tab displays records from a MySQL database using JDBC. Users can view details such as ID, work name, time duration, skill, and pay. The Enroll into Work tab allows users to add new work entries to the database with proper validation. The Update/Delete Operations tab enables users to update existing records or delete records by ID.</p>
+                        <p>JDBC is used for seamless database connectivity, supporting SQL operations for querying, inserting, updating, and deleting records. The project includes error handling to manage SQL exceptions, ensuring a smooth user experience. This project effectively demonstrates integrating Java Swing with MySQL for essential database operations.</p>                    
+                        `;
+                }
+
+                modal.style.display = "flex";
+            });
+        });
+    </script>
+</body>
+</html>
