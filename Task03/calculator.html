@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simple Calculator</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #f0f0f0;
+            margin: 0;
+        }
+
+        .calculator {
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            width: 320px;
+            overflow: hidden;
+        }
+
+        #display {
+            background-color: #222;
+            color: #fff;
+            font-size: 2em;
+            text-align: right;
+            padding: 20px;
+            box-sizing: border-box;
+        }
+
+        .buttons {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+        }
+
+        button {
+            background-color: #e0e0e0;
+            border: 1px solid #ccc;
+            font-size: 1.5em;
+            padding: 20px;
+            cursor: pointer;
+        }
+
+        button:active {
+            background-color: #ccc;
+        }
+    </style>
+</head>
+<body>
+    <div class="calculator">
+        <div id="display">0</div>
+        <div class="buttons">
+            <button onclick="clearDisplay()">C</button>
+            <button onclick="appendNumber('7')">7</button>
+            <button onclick="appendNumber('8')">8</button>
+            <button onclick="appendNumber('9')">9</button>
+            <button onclick="appendOperator('/')">/</button>
+            <button onclick="appendNumber('4')">4</button>
+            <button onclick="appendNumber('5')">5</button>
+            <button onclick="appendNumber('6')">6</button>
+            <button onclick="appendOperator('*')">*</button>
+            <button onclick="appendNumber('1')">1</button>
+            <button onclick="appendNumber('2')">2</button>
+            <button onclick="appendNumber('3')">3</button>
+            <button onclick="appendOperator('-')">-</button>
+            <button onclick="appendNumber('0')">0</button>
+            <button onclick="appendOperator('.')">.</button>
+            <button onclick="calculate()">=</button>
+            <button onclick="appendOperator('+')">+</button>
+        </div>
+    </div>
+    <script>
+        let displayValue = '0';
+        let pendingValue = null;
+        let operator = null;
+
+        const display = document.getElementById('display');
+
+        function updateDisplay() {
+            display.textContent = displayValue;
+        }
+
+        function clearDisplay() {
+            displayValue = '0';
+            pendingValue = null;
+            operator = null;
+            updateDisplay();
+        }
+
+        function appendNumber(number) {
+            if (displayValue === '0') {
+                displayValue = number;
+            } else {
+                displayValue += number;
+            }
+            updateDisplay();
+        }
+
+        function appendOperator(op) {
+            if (pendingValue === null) {
+                pendingValue = displayValue;
+                displayValue = '0';
+            }
+            operator = op;
+        }
+
+        function calculate() {
+            if (pendingValue === null || operator === null) {
+                return;
+            }
+
+            let result;
+            switch (operator) {
+                case '+':
+                    result = parseFloat(pendingValue) + parseFloat(displayValue);
+                    break;
+                case '-':
+                    result = parseFloat(pendingValue) - parseFloat(displayValue);
+                    break;
+                case '*':
+                    result = parseFloat(pendingValue) * parseFloat(displayValue);
+                    break;
+                case '/':
+                    result = parseFloat(pendingValue) / parseFloat(displayValue);
+                    break;
+                default:
+                    return;
+            }
+
+            displayValue = result.toString();
+            pendingValue = null;
+            operator = null;
+            updateDisplay();
+        }
+    </script>
+</body>
+</html>
